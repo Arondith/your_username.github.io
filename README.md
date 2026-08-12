@@ -2,20 +2,26 @@
 
 ## About
 
-A lightweight, read-only developer tool that analyzes public GitHub profiles using the GitHub REST API. It summarizes public repositories, stars, forks, followers, language usage, recent activity, and other publicly available profile information directly in the browser.
+A lightweight **read-only GitHub profile analysis tool** built with HTML, CSS, JavaScript, and the GitHub REST API. The application lets a user enter any public GitHub username and converts publicly available account data into an easy-to-read developer profile summary directly in the browser.
 
-## What it does
+The analyzer retrieves **basic profile information, public repository count, followers, total stars, total forks, top repositories, primary language usage, and recent public activity**. It uses GitHub's public API without collecting passwords, storing credentials, requesting private-repository access, or embedding a personal access token in the front-end code.
 
-Enter a GitHub username and the app summarizes:
+The project demonstrates practical REST API integration, asynchronous JavaScript requests, data aggregation, dynamic interface updates, error handling, and privacy-conscious use of public developer data.
 
-- Public repository count
-- Total stars across owned public repositories
-- Total forks across owned public repositories
-- Followers
-- Top repositories
-- Primary language mix
-- Recent public GitHub activity
-- Basic public profile information
+## Core features
+
+- Search and analyze a public GitHub username
+- Display basic public profile information
+- Count public repositories
+- Calculate total stars across owned public repositories
+- Calculate total forks
+- Display follower information
+- Rank / display top repositories
+- Summarize primary programming-language usage
+- Show recent public GitHub activity
+- Support usernames through the search field or `?user=USERNAME`
+- Read-only GitHub REST API integration
+- No GitHub password or private data required
 
 The app loads `Arondith` by default and can analyze another public account from the search field or a `?user=USERNAME` query parameter.
 
@@ -32,6 +38,15 @@ GET /users/{username}/events/public
 ```
 
 Requests include GitHub's REST API version header and use only public, read-only data. No password, personal access token, private repository access, or write permission is requested.
+
+## Technology
+
+- HTML
+- CSS
+- JavaScript
+- GitHub REST API
+- Asynchronous API requests
+- Client-side data processing
 
 ## Run locally
 
