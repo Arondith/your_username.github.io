@@ -1,6 +1,8 @@
 # GitHub Profile Analyzer
 
-A lightweight, read-only developer tool that analyzes public GitHub profiles using the GitHub REST API.
+## About
+
+A lightweight, read-only developer tool that analyzes public GitHub profiles using the GitHub REST API. It summarizes public repositories, stars, forks, followers, language usage, recent activity, and other publicly available profile information directly in the browser.
 
 ## What it does
 
