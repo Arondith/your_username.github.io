@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Analyze a public GitHub profile using the GitHub REST API, including repositories, languages, stars, forks, and recent activity." />
+  <meta name="theme-color" content="#0d1117" />
+  <title>GitHub Profile Analyzer — Arondith</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="#" aria-label="GitHub Profile Analyzer home">
+        <span class="brand-mark" aria-hidden="true">&lt;/&gt;</span>
+        <span>GitHub Profile Analyzer</span>
+      </a>
+      <a class="github-link" href="https://github.com/Arondith" target="_blank" rel="noreferrer">@Arondith ↗</a>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section class="hero">
+      <p class="eyebrow">Built with the GitHub REST API</p>
+      <h1>Understand any public GitHub profile at a glance.</h1>
+      <p class="hero-copy">Search a GitHub username to summarize repositories, stars, forks, languages, account history, and recent public activity.</p>
+
+      <form id="search-form" class="search-form" autocomplete="off">
+        <label class="sr-only" for="username">GitHub username</label>
+        <div class="search-box">
+          <span class="search-prefix" aria-hidden="true">github.com/</span>
+          <input id="username" name="username" type="text" value="Arondith" placeholder="octocat" maxlength="39" spellcheck="false" required />
+          <button id="analyze-button" type="submit">Analyze</button>
+        </div>
+      </form>
+
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+    </section>
+
+    <section id="results" class="results" hidden>
+      <article class="profile-card">
+        <div class="profile-main">
+          <img id="avatar" class="avatar" src="" alt="" />
+          <div>
+            <div class="profile-heading">
+              <h2 id="display-name"></h2>
+              <span id="account-type" class="pill"></span>
+            </div>
+            <a id="profile-link" class="profile-handle" href="#" target="_blank" rel="noreferrer"></a>
+            <p id="bio" class="bio"></p>
+            <div id="profile-meta" class="profile-meta"></div>
+          </div>
+        </div>
+      </article>
+
+      <div class="stats-grid" aria-label="GitHub profile statistics">
+        <article class="stat-card"><span class="stat-label">Public repositories</span><strong id="repos-count">0</strong></article>
+        <article class="stat-card"><span class="stat-label">Total stars</span><strong id="stars-count">0</strong></article>
+        <article class="stat-card"><span class="stat-label">Total forks</span><strong id="forks-count">0</strong></article>
+        <article class="stat-card"><span class="stat-label">Followers</span><strong id="followers-count">0</strong></article>
+      </div>
+
+      <div class="content-grid">
+        <section class="panel">
+          <div class="panel-heading">
+            <div>
+              <p class="panel-kicker">Portfolio</p>
+              <h3>Top repositories</h3>
+            </div>
+          </div>
+          <div id="repo-list" class="repo-list"></div>
+        </section>
+
+        <aside class="side-stack">
+          <section class="panel">
+            <p class="panel-kicker">Technology</p>
+            <h3>Languages</h3>
+            <div id="language-list" class="language-list"></div>
+          </section>
+
+          <section class="panel">
+            <p class="panel-kicker">Activity</p>
+            <h3>Recent public events</h3>
+            <div id="activity-list" class="activity-list"></div>
+          </section>
+        </aside>
+      </div>
+
+      <p id="api-note" class="api-note"></p>
+    </section>
+
+    <section class="about-panel">
+      <div>
+        <p class="panel-kicker">About this integration</p>
+        <h2>A small developer tool powered by GitHub.</h2>
+      </div>
+      <p>This project calls GitHub’s public REST API directly from the browser. It is intentionally read-only and does not request account credentials, private repository access, or a personal access token.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <span>GitHub Profile Analyzer</span>
+      <span>Built by Arondith · 2026</span>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
