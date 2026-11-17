@@ -265,6 +265,37 @@ h1, h2, h3, p, figure {
   text-underline-offset: 4px;
 }
 
+.external-arrow {
+  position: relative;
+  width: 11px;
+  height: 11px;
+  flex: none;
+}
+
+.external-arrow::before,
+.external-arrow::after {
+  position: absolute;
+  content: "";
+}
+
+.external-arrow::before {
+  top: 1px;
+  right: 1px;
+  width: 7px;
+  height: 7px;
+  border-top: 1px solid currentColor;
+  border-right: 1px solid currentColor;
+}
+
+.external-arrow::after {
+  top: 5px;
+  left: 0;
+  width: 11px;
+  height: 1px;
+  background: currentColor;
+  transform: rotate(-45deg);
+}
+
 .hero-portrait {
   position: relative;
   justify-self: end;
