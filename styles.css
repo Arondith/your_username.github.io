@@ -90,3 +90,66 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+.certifications {
+  padding-block: clamp(72px, 10vw, 120px);
+  border-top: 1px solid var(--line);
+  scroll-margin-top: 74px;
+}
+
+.certifications .section-title {
+  margin-bottom: 34px;
+}
+
+.certification-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.certification-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: clamp(20px, 3vw, 30px);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: var(--bg-soft);
+}
+
+.certification-badge {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 16px;
+  object-fit: contain;
+}
+
+.certification-card h3 {
+  margin: 0;
+  font-size: clamp(1.2rem, 2.1vw, 1.5rem);
+  line-height: 1.25;
+}
+
+.certification-issuer {
+  margin: 8px 0 20px;
+  color: var(--muted);
+  font-size: .9rem;
+}
+
+.certification-card .button {
+  margin-top: auto;
+}
+
+.certification-card .button:focus-visible {
+  outline: 2px solid var(--accent-2);
+  outline-offset: 3px;
+}
+
+@media (max-width: 720px) {
+  .certification-grid {
+    grid-template-columns: 1fr;
+  }
+}
