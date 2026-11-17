@@ -29,6 +29,15 @@
   transition: border-color .25s ease;
 }
 
+.coverage-logo-inquirer {
+  background: #f5f5f5;
+}
+
+.coverage-logo-bombo {
+  border-color: var(--line);
+  background: var(--panel);
+}
+
 .coverage-logo:hover,
 .coverage-logo:focus-visible {
   border-color: var(--accent);
