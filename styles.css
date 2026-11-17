@@ -25,17 +25,8 @@
   padding: clamp(12px, 2vw, 20px);
   border: 1px solid transparent;
   border-radius: 18px;
-  background: #fff;
+  background: transparent;
   transition: border-color .25s ease;
-}
-
-.coverage-logo-inquirer {
-  background: #f5f5f5;
-}
-
-.coverage-logo-bombo {
-  border-color: var(--line);
-  background: var(--panel);
 }
 
 .coverage-logo:hover,
