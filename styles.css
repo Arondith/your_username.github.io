@@ -162,7 +162,16 @@
 .experience-timeline { display: grid; gap: 20px; }
 .experience-card { display: grid; grid-template-columns: 48px minmax(0, 1fr); align-items: start; gap: 18px; padding: clamp(20px, 3vw, 30px); border: 1px solid rgba(255,255,255,.035); border-radius: 9px; background: #0d1320; }
 .experience-icon { display: grid; place-items: center; width: 46px; height: 46px; border-radius: 50%; background: #181d2b; color: var(--accent-2); font-weight: 800; font-size: .88rem; letter-spacing: -.03em; }
-.experience-icon-client { background: #dbeafe; color: #1e40af; font-size: .78rem; }
+.experience-icon-client {
+  overflow: hidden;
+  background: #718096;
+}
+.experience-icon-client img {
+  width: 100%;
+  height: auto;
+  /* Fill the badge using the logo's visible area inside the transparent PNG. */
+  transform: translateY(8.5%) scale(1.45);
+}
 .experience-content h3 { margin: 1px 0 4px; font-size: clamp(1rem, 1.7vw, 1.16rem); line-height: 1.4; font-weight: 750; }
 .experience-meta { margin: 0 0 10px; color: var(--muted); font-size: .85rem; }
 .experience-content ul { margin: 0; padding-left: 18px; }
