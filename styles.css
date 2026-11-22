@@ -153,3 +153,18 @@
     grid-template-columns: 1fr;
   }
 }
+
+
+/* Professional experience */
+.experience { padding-block: clamp(72px, 10vw, 120px); border-top: 1px solid var(--line); scroll-margin-top: 74px; }
+.experience .section-heading-row { margin-bottom: 36px; }
+.experience-timeline { display: grid; gap: 18px; }
+.experience-card { display: grid; grid-template-columns: minmax(150px, .34fr) 1fr; gap: clamp(20px, 4vw, 52px); padding: clamp(24px, 4vw, 38px); border: 1px solid var(--line); border-radius: 22px; background: var(--bg-soft); }
+.experience-date { color: var(--muted); font-size: .95rem; font-weight: 600; padding-top: 5px; }
+.experience-type { color: var(--accent-2); font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; }
+.experience-content h3 { font-size: clamp(1.3rem, 2.4vw, 1.8rem); margin: 10px 0 4px; }
+.experience-company { font-weight: 600; margin: 0 0 14px; }
+.experience-content > p:not(.experience-company) { color: var(--muted); line-height: 1.7; max-width: 70ch; }
+.experience-content .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+.experience-content .text-link { display: inline-flex; margin-top: 22px; }
+@media (max-width: 720px) { .experience-card { grid-template-columns: 1fr; gap: 12px; } }
