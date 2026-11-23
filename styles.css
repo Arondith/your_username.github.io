@@ -181,3 +181,10 @@
 .experience-link { display: inline-block; margin-top: 10px; color: var(--accent-2); font-size: .9rem; font-weight: 650; }
 .experience-link:hover, .experience-link:focus-visible { text-decoration: underline; }
 @media (max-width: 600px) { .experience-card { grid-template-columns: 40px minmax(0,1fr); gap: 12px; padding: 18px 14px; } .experience-icon { width: 40px; height: 40px; font-size: .7rem; } .experience-content li { font-size: .88rem; } }
+
+/* Ambient animated network mesh: decorative and non-interactive */
+#network-mesh{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:.78}
+body{isolation:isolate}
+body>header,body>main,body>footer{position:relative;z-index:1}
+body>.site-header{position:sticky}
+@media(prefers-reduced-motion:reduce){#network-mesh{opacity:.4}}
